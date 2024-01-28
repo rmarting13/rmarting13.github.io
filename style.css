@@ -1,0 +1,528 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+html {
+    font-size: 13px;
+    font-family: inter, sans-serif;
+}
+body {
+    margin: 0em; 
+}
+
+.row, .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 0rem;
+}
+
+.navbar-brand img {
+    display: flex;
+    width: 22%;
+    height: auto;
+}
+
+.navbar-content {
+    flex-grow: 0;
+}
+
+.nav-link {
+    font-size: large;
+    border-radius: 1rem;
+}
+
+.nav-link:hover {
+    
+    background-color: darkorange;
+}
+/* 
+.row-container {
+    padding: 3rem;
+} */
+
+#rc1 {
+    background-image: url("assets/water_floyd_background.jpeg");
+    background-size: cover;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.carousel-item img{
+    border-radius: 1rem;
+}
+
+.carousel-caption {
+    border-radius: 1rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+}
+
+.carousel-caption p {
+    font-size: large;
+}
+
+#navbar {
+    /*display: flex;
+    justify-content: space-between;
+    border-bottom: 0.0625em solid gray; 
+    padding: 1.1em 8em; 
+    position: sticky;*/
+    /* top: 0em; */
+    background-image:linear-gradient(rgb(65, 105, 225), #201b24);
+}
+
+div#navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+#rc2 {
+    background-color:black;
+}
+
+#header-1 {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)); */
+    color: #d9d9d9;
+    padding: 5rem;
+}
+
+#header-1 h3 {
+    text-align: center;
+}
+
+#bg-img-container {
+    background-image: url("assets/premise.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: calc(100vh - 80px); */
+    height: 50rem;
+    background-position: center center;
+}
+
+.side-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.redondo {
+    background-color: white;
+    border: 0.15em solid black;
+    border-radius: 1.5626em;
+    border-width: 0.2em;
+    width: 9em;
+    height: 3em;
+}
+
+.card-container {
+    padding: 3rem;
+    /* /* display: flex; */
+    justify-content: space-around;
+}
+
+.row-card-container {
+    padding: 3em 3em;
+    overflow: hidden;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+.row-container {
+    padding: 1em, 0em;
+}
+
+/* .content-box-title {
+    padding-left: 1.5em;
+    padding-top: 2em;
+} */
+
+.img-content img, .right-info-card img {
+    border-radius:0em 3em 3em 3em;
+    vertical-align: top;
+    width:44em;
+    height:30em;
+    image-rendering: auto;
+}
+
+footer {
+    background-color: black;
+    padding: 3em;
+    color: white;
+}
+footer div:first-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0em 2em;
+}
+footer p {
+    padding: 1em 0em;
+}
+.footer-item img {
+    vertical-align: top;
+    width: 15em;
+    height: 7em;
+    image-rendering: auto;
+}
+.footer-item {
+    align-items: center;
+}
+.link a {
+    font-weight: 600;
+    color: #d9d9d9;
+    cursor: pointer;
+    text-decoration: white;
+    font-size: 1.1em;
+}
+
+#card-txt p {
+    font-size:larger;
+}
+
+#bg-info-cards-container {
+    background-image: url("assets/nortebombas_store.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: calc(100vh - 80px); */
+    background-position: center center;
+    justify-content: center;
+    padding: 0rem;
+    overflow: hidden;
+}
+
+.left-info-card {
+    border-radius:0em 3em 3em 0em;
+    margin: 2rem 0rem 2rem 0rem;
+    position: relative;
+    right: 5%;
+    padding: 3rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: end;
+}
+
+/* .left-info-card img {
+    border-radius:3em 0em 3em 3em;
+    vertical-align: top;
+    width: 36em;
+    height: 27em;
+    image-rendering: auto;
+} */
+
+.right-info-card {
+    border-radius:3em 0em 0em 3em;
+    margin: 2rem 0rem 2rem 0rem;
+    position: relative;
+    left: 5%;
+    padding: 3rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: start;
+}
+
+.right-info-card img {
+    border-radius:0em 3em 3em 3em;;
+    vertical-align: top;
+    width: 36em;
+    height: 27em;
+    image-rendering: auto;
+}
+
+.img-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.info-card-text {
+    color: aliceblue;
+}
+
+#footer-p {
+    width: 23em;
+    resize: horizontal;
+    overflow: auto;
+    font-size: 0.9em;
+}
+
+/**********************TRANSITIONS***********************************/
+
+/* .elementToFadeInAndOut {
+    width:200px;
+    height: 200px;
+    -webkit-animation: fadeinout 1s linear forwards;
+    animation: fadeinout 1s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+} */
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 300ms;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade-out {
+	opacity: 0;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 300ms;
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.slide-in {
+    animation-name: show-right;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+.slide-out {
+    animation-name: hide-right;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+@keyframes hide-right {
+    0%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes show-right {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes show-left {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes hide-left {
+    0%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(200%);
+    }
+}
+
+.hide-left {
+    animation-name: hide-left;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+.hide-right {
+    animation-name: hide-right;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+.show-left {
+    animation-name: show-left;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+.show-right {
+    animation-name: show-right;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+/*CODE TO AUTO-SWAP IMG AT CARD INFO*/
+
+.image-fader img {
+    position: absolute;
+    animation-name: imagefade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+  }
+  
+  @keyframes imagefade {
+    0% {
+        opacity:1;
+    }
+    25% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    75% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+  }
+  
+  .image-fader img:nth-of-type(1) {
+    animation-delay: 3s;
+  }
+  .image-fader img:nth-of-type(2) {
+    animation-delay: 0s;
+  }
+
+  .carousel-caption-custom {
+    border-radius: 1rem 1rem 0 0;
+    backdrop-filter: blur(5px);
+    right: 0%;
+    left: 0%;
+    top: 0%;
+    bottom: 80%;
+  }
+
+/*@media only screen and (min-width: 350px) and (max-width: 500px) {
+    html {
+        font-size: 7px;
+    }
+    /* .row-container-main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .row-container-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #navbar {
+        flex-direction: column;
+    }
+    
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}*/
+
+/*@media only screen and (min-width: 500px) and (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+    /* .row-container-main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .row-container-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #navbar {
+        flex-direction: column;
+    }
+    
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    } */
+/* } */
+
+/* @media only screen and (min-width: 600px) and (max-width: 800px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    html {
+        font-size: 10px;
+    }
+} */
+/* 
+@media (width <= 1100px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media (width >= 2700px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (width >= 3100px) {
+    html {
+        font-size: 32px;
+    }
+} */
