@@ -12,32 +12,25 @@
 
 <body>
   <nav class="navbar sticky-top navbar-expand-lg" id="navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+    <div class="container-fluid" style="padding: 0 1rem 0 1rem;">
+      <a href="#">
         <img src="assets/navbar_logo_trimed.png" alt="Logo" width="350" height="50">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-list"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+        </svg>
       </button>
       <div class="collapse navbar-collapse justify-content-end navbar-content" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active text-light" aria-current="page" href="#">Inicio</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Servicios
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Nuestro trabajo</a></li>
-              <li><a class="dropdown-item" href="#">Nuestras instalaciones</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Nuestra visión</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#">Servicios</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
@@ -58,7 +51,8 @@
           <button class="redondo" style="margin-left: 1em;">Sumate +</button>
       </div>
   </div> -->
-  <div class="container-fluid">
+
+  <div class="container-fluid rounded-container">
     <div class="row justify-content-center row-container" id="rc1">
       <div class="carousel-container">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -94,37 +88,228 @@
         </div>
       </div>
     </div>
-    <div class="row justify-content-center row-container" id="rc2">
-      <div class="col-2">
+  </div>
+  <div class="container-fluid rounded-container">
+    <div class="row">
+      <h3 class="display-4 text-center">Conozca nuestro servicios:</h1>
+    </div>
+    <div class="row card-container">
+      <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <!-- <div class="card col-sm-3" style="width: 30rem; padding-top: 0.5rem;"> -->
+        <div class="card m-2 shadow" style="padding: 0.5rem;">
+          <div id="carouselToolsFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Máquina de soldar</h5>
+                </div>
+                <img src="assets/instalaciones/resized/maquina_de_soldar.png" class="d-block w-100 img-fluid alt=" ...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Torno mecánico</h5>
+                </div>
+                <img src="assets/instalaciones/resized/torno_mecanico.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Rectificadora tangencial</h5>
+                </div>
+                <img src="assets/instalaciones/resized/rectificadora_tangencial.png" class="d-block w-100 img-fluid"
+                  alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Banco de pruebas de bombas</h5>
+                </div>
+                <img src="assets/instalaciones/resized/banco_de_pruebas_de_bombas.png" class="d-block w-100 img-fluid"
+                  alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Lapidadora de sellos mecánicos</h5>
+                </div>
+                <img src="assets/instalaciones/resized/lapiadadora_de_sellos_mecanicos.png"
+                  class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Limadora</h5>
+                </div>
+                <img src="assets/instalaciones/resized/limadora.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Perforadora - Fresadora</h5>
+                </div>
+                <img src="assets/instalaciones/resized/fresadora.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Máquina bobinadora</h5>
+                </div>
+                <img src="assets/instalaciones/resized/maquina_bobinadora.png" class="d-block w-100 img-fluid"
+                  alt="...">
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselToolsFade" data-bs-slide="prev"
+              hidden>
+              <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span> -->
+            </button>
+            <button class="carousel-control-next next-btn" type="button" data-bs-target="#carouselToolsFade"
+              data-bs-slide="next" hidden>
+              <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span> -->
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <h4 class="card-title">Visite nuestras instalaciones</h4>
+            </div>
+            <p class="fs-5">
+              Contamos con una amplia gama de equipos especialiazos para brindar
+              soluciones con la mejor calidad del mercado.
+            </p>
+            <a href="#" class="btn btn-primary">Ir al catálogo</a>
+            <!-- <ul class="list-group list-group-flush">
+            <li class="list-group-item">Maquina de Soldar</li>
+            <li class="list-group-item">Torno Mecánico</li>
+            <li class="list-group-item">Rectificadora tangencial</li>
+            <li class="list-group-item">Banco de pruebas de Bombas</li>
+            <li class="list-group-item">Lapidadora de sellos mecánicos</li>
+            <li class="list-group-item">Limadora</li>
+            <li class="list-group-item">Agujereadora - Fresadora</li>
+            <li class="list-group-item">Maquina bobinadora</li>
+          </ul> -->
+          </div>
+        </div>
       </div>
-      <div class="col-8" id="header-1">
+      <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="card m-2 shadow" style="padding: 0.5rem;">
+          <div id="carouselJobsFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Antes</h5>
+                </div>
+                <img src="assets/trabajos/before.png" class="d-block w-100 img-fluid alt=" ...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Después</h5>
+                </div>
+                <img src="assets/trabajos/after.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Antes</h5>
+                </div>
+                <img src="assets/trabajos/before1.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Después</h5>
+                </div>
+                <img src="assets/trabajos/after1.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Antes</h5>
+                </div>
+                <img src="assets/trabajos/before2.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Después</h5>
+                </div>
+                <img src="assets/trabajos/after2.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Antes</h5>
+                </div>
+                <img src="assets/trabajos/before3.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Después</h5>
+                </div>
+                <img src="assets/trabajos/after3.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Antes</h5>
+                </div>
+                <img src="assets/trabajos/before4.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Después</h5>
+                </div>
+                <img src="assets/trabajos/after4.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselJobsFade" data-bs-slide="prev"
+              hidden>
+              <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span> -->
+            </button>
+            <button class="carousel-control-next next-btn" type="button" data-bs-target="#carouselJobsFade"
+              data-bs-slide="next" hidden>
+              <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span> -->
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <h4 class="card-title">Nuestros trabajos</h4>
+            </div>
+            <p class="card-text fs-5 text-justify">Heche un vistazo a la calidad de nuestros servicios, avalados por la
+              satisfacción de
+              nuestros clientes.
+            </p>
+            <a href="#" class="btn btn-primary">Ir al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid rounded-container">
+    <div class="row">
+
+    </div>
+    <div class="row" style="justify-content: space-around; align-items: center;">
+      <div class="row-card-container col-sm-12 col-md-4 col-lg-6 col-xl-6" >
+        <!-- <div class="img-content"> -->
+          <img src="assets/industrial_bomb_background.png" class="shadow fade-in img-fluid card-img" id="card-img">
+        <!-- </div> -->
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-6 col-xl-6">
+        <div class="side-text-content slide-in" id="card-txt">
+          <h1>División Industrial</h1>
+          <img src="assets/Logomejorado.png" alt="" class="img-fluid" hidden>
+          <div class="text">
+            <p class="text-justify">Venta y reparación de Motores, Reductores, Electrobombas, Hidrolavadoras, Bombas
+              Sumergibles, bombas cloacales, Moto Bombas, Bombas de desplazamiento positivo (Pistón y
+              engranaje).</p>
+          </div>
+          <div class="button">
+            <button class="redondo" id="btn-next">siguiente -></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-container" id="rc2">
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6" id="header-1">
         <h3>
           Una empresa de salta, ubicada en San Ramon de la nueva Oran, con más de 30 años de
           trayectoria, cuenta con soluciones electromecánicas para la industria:
         </h3>
       </div>
-
-      <div class="col-2">
-      </div>
     </div>
     <div class="row justify-content-center" id="bg-img-container">
-    </div>
-    <div class="row text-center shadow row-card-container">
-      <div class="img-content col-sm-12 col-md-12 col-lg-12 col-xl-6">
-        <img src="assets/industrial_bomb_background.png" class="fade-in img-fluid" id="card-img">
-      </div>
-      <div class="side-text-content shadow col-sm-12 col-md-12 col-lg-12 col-xl-6 slide-in" id="card-txt">
-        <h1>División Industrial</h1>
-        <img src="assets/Logomejorado.png" alt="" class="img-fluid" hidden>
-        <div class="text">
-          <p>Venta y reparación de Motores, Reductores, Electrobombas, Hidrolavadoras, Bombas
-            Sumergibles, bombas cloacales, Moto Bombas, Bombas de desplazamiento positivo (Pistón y
-            engranaje).</p>
-        </div>
-        <div class="button">
-          <button class="redondo" id="btn-next">siguiente -></button>
-        </div>
-      </div>
     </div>
   </div>
   <div class="row" id="bg-info-cards-container">
@@ -223,289 +408,7 @@
     </div>
   </div>
   <div class="container-fluid">
-    <div class="row card-container text-center">
-      <!-- <div class="card col-md-6" style="width: 30rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card col-md-6" style="width: 30rem;">
-        <img src="assets/before.png" class="card-img-top img-fluid slides" alt="...">
-        <img src="assets/after.png" class="card-img-top img-fluid slides" alt="...">
-        <img src="assets/before1.png" class="card-img-top img-fluid slides" alt="...">
-        <img src="assets/after1.png" class="card-img-top img-fluid slides" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div> -->
 
-      <!-- <div class="card col-sm-3" style="width: 30rem; padding-top: 0.5rem;"> -->
-      <div class="card m-2 shadow col-sm-12 col-md-12 col-lg-3 col-xl-3" style="padding: 0.5rem;">
-        <div id="carouselToolsFade" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Máquina de soldar</h5>
-              </div>
-              <img src="assets/instalaciones/resized/maquina_de_soldar.png" class="d-block w-100 img-fluid alt=" ...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Torno mecánico</h5>
-              </div>
-              <img src="assets/instalaciones/resized/torno_mecanico.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Rectificadora tangencial</h5>
-              </div>
-              <img src="assets/instalaciones/resized/rectificadora_tangencial.png" class="d-block w-100 img-fluid"
-                alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Banco de pruebas de bombas</h5>
-              </div>
-              <img src="assets/instalaciones/resized/banco_de_pruebas_de_bombas.png" class="d-block w-100 img-fluid"
-                alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Lapidadora de sellos mecánicos</h5>
-              </div>
-              <img src="assets/instalaciones/resized/lapiadadora_de_sellos_mecanicos.png"
-                class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Limadora</h5>
-              </div>
-              <img src="assets/instalaciones/resized/limadora.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Perforadora - Fresadora</h5>
-              </div>
-              <img src="assets/instalaciones/resized/fresadora.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Máquina bobinadora</h5>
-              </div>
-              <img src="assets/instalaciones/resized/maquina_bobinadora.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-          </div>
-
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselToolsFade" data-bs-slide="prev"
-            hidden>
-            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span> -->
-          </button>
-          <button class="carousel-control-next next-btn" type="button" data-bs-target="#carouselToolsFade"
-            data-bs-slide="next" hidden>
-            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span> -->
-          </button>
-        </div>
-        <div class="card-body">
-          <div class="card-header">
-            <h4 class="card-title">Visite nuestras instalaciones</h4>
-          </div>
-          <p class="fs-5">
-            Contamos con una amplia gama de equipos especialiazos para brindar
-            soluciones con la mejor calidad del mercado.
-          </p>
-          <a href="#" class="btn btn-primary">Ir al catálogo</a>
-          <!-- <ul class="list-group list-group-flush">
-            <li class="list-group-item">Maquina de Soldar</li>
-            <li class="list-group-item">Torno Mecánico</li>
-            <li class="list-group-item">Rectificadora tangencial</li>
-            <li class="list-group-item">Banco de pruebas de Bombas</li>
-            <li class="list-group-item">Lapidadora de sellos mecánicos</li>
-            <li class="list-group-item">Limadora</li>
-            <li class="list-group-item">Agujereadora - Fresadora</li>
-            <li class="list-group-item">Maquina bobinadora</li>
-          </ul> -->
-        </div>
-      </div>
-
-      <div class="card m-2 shadow col-sm-12 col-md-12 col-lg-3 col-xl-3">
-        <!-- <img src="assets/mantenimiento2.jpg"  class="card-img-top" alt=""> -->
-        <div class="card-body">
-          <h5>SERVICIOS DE MANTENIMIENTO – INGENIERIA</h5>
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  <strong>Asesoramiento en técnicas de mantenimiento</strong>
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Análisis Situación Actual - Identificar Puntos critico</li>
-                    <li>Planteo de estrategias de mantenimiento según Análisis (Correctivo – Preventivo – Predictivo –
-                      Programado)</li>
-                    <li>Gestión de un plan de mantenimiento (Salud de Equipos)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  <strong>Diagnostico de equipos con inspecciones preventivas y predictivas</strong>
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Termografía</li>
-                    <li>Análisis de Vibraciones</li>
-                    <li>Consumo de corriente para medir salud Equipos.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  <strong>Asistencias en campos para desmontar – Montar equipos rotantes</strong>
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Asistencia en campo para el desmontajes y montaje de bombas y motores
-                  eléctricos</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                  <strong>Asesoramiento en seguridad en equipos rotantes</strong>
-                </button>
-              </h2>
-              <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Análisis de condición de Equipos para evitar accidentes en la operación y
-                  mantenimiento</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                  <strong>Capacitaciones</strong>
-                </button>
-              </h2>
-              <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Lubricación</li>
-                    <li>Alineación de Equipos</li>
-                    <li>Inspecciones</li>
-                    <li>Operación y Mantenimiento Bombas Centrifugas</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- <a href="#" class="btn btn-primary">Ir al catálogo</a> -->
-        </div>
-      </div>
-
-      <div class="card m-2 shadow col-sm-12 col-md-12 col-lg-3 col-xl-3" style="padding: 0.5rem;">
-        <div id="carouselJobsFade" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Antes</h5>
-              </div>
-              <img src="assets/trabajos/before.png" class="d-block w-100 img-fluid alt=" ...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Después</h5>
-              </div>
-              <img src="assets/trabajos/after.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Antes</h5>
-              </div>
-              <img src="assets/trabajos/before1.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Después</h5>
-              </div>
-              <img src="assets/trabajos/after1.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Antes</h5>
-              </div>
-              <img src="assets/trabajos/before2.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Después</h5>
-              </div>
-              <img src="assets/trabajos/after2.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Antes</h5>
-              </div>
-              <img src="assets/trabajos/before3.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Después</h5>
-              </div>
-              <img src="assets/trabajos/after3.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Antes</h5>
-              </div>
-              <img src="assets/trabajos/before4.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                <h5>Después</h5>
-              </div>
-              <img src="assets/trabajos/after4.png" class="d-block w-100 img-fluid" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselJobsFade" data-bs-slide="prev"
-            hidden>
-            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span> -->
-          </button>
-          <button class="carousel-control-next next-btn" type="button" data-bs-target="#carouselJobsFade"
-            data-bs-slide="next" hidden>
-            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span> -->
-          </button>
-        </div>
-        <div class="card-body">
-          <div class="card-header">
-            <h4 class="card-title">Nuestros trabajos</h4>
-          </div>
-          <p class="card-text fs-5">Heche un vistazo a la calidad de nuestros servicios, avalados por la satisfacción de
-            nuestros clientes.
-          </p>
-          <a href="#" class="btn btn-primary">Ir al catálogo</a>
-        </div>
-      </div>
-    </div>
   </div>
 
   <footer>
