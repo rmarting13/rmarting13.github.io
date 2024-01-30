@@ -14,7 +14,7 @@
   <nav class="navbar sticky-top navbar-expand-lg" id="navbar">
     <div class="container-fluid" style="padding: 0 1rem 0 1rem;">
       <a href="#">
-        <img src="assets/navbar_logo_trimed.png" alt="Logo" width="350" height="50">
+        <img src="assets/navbar_logo_trimed.png" alt="Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,13 +27,13 @@
       <div class="collapse navbar-collapse justify-content-end navbar-content" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active text-light fs-6" aria-current="page" href="#">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Servicios</a>
+            <a class="nav-link active text-light fs-6" aria-current="page" href="#">Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            <a class="nav-link text-light fs-6" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
               aria-controls="offcanvasExample">
               Contacto
             </a>
@@ -52,44 +52,45 @@
       </div>
   </div> -->
 
-  <div class="container-fluid rounded-container">
-    <div class="row justify-content-center row-container" id="rc1">
-      <div class="carousel-container">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="assets/logo_background.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/background_collage.png" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Divisiones</h3>
-                <p>Indusrial - Automotores - Productos especiales - Sellos mecánicos</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="assets/providers.png" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Nuestros proveedores</h3>
-                <p>Nos acompañan para brindar el mejor servicio en la zona</p>
-              </div>
-            </div>
+  <div class="container-fluid rounded-container shadow">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/logo_background.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/background_collage.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Divisiones</h3>
+            <p>Indusrial - Automotores - Productos especiales - Sellos mecánicos</p>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/providers.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Nuestros proveedores</h3>
+            <p>Nos acompañan para brindar el mejor servicio en la zona</p>
+          </div>
         </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+    <!-- <div class="carousel-container">
+      
+    </div> -->
+    <!-- <div class="row justify-content-center row-container" id="rc1">
+    </div> -->
   </div>
-  <div class="container-fluid rounded-container">
+  <div class="container-fluid rounded-container shadow">
     <div class="row">
       <h3 class="display-4 text-center">Conozca nuestro servicios:</h1>
     </div>
@@ -276,17 +277,15 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid rounded-container">
-    <div class="row">
 
-    </div>
+  <div class="container-fluid rounded-container shadow">
     <div class="row" style="justify-content: space-around; align-items: center;">
-      <div class="row-card-container col-sm-12 col-md-4 col-lg-6 col-xl-6" >
+      <div class="row-card-container col-sm-12 col-md-6 col-lg-6 col-xl-6" >
         <!-- <div class="img-content"> -->
           <img src="assets/industrial_bomb_background.png" class="shadow fade-in img-fluid card-img" id="card-img">
         <!-- </div> -->
       </div>
-      <div class="col-sm-12 col-md-4 col-lg-6 col-xl-6">
+      <div class="row-card-container col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <div class="side-text-content slide-in" id="card-txt">
           <h1>División Industrial</h1>
           <img src="assets/Logomejorado.png" alt="" class="img-fluid" hidden>
@@ -301,6 +300,10 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="container-fluid rounded-container">
+    
     <div class="row row-container" id="rc2">
       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6" id="header-1">
         <h3>
@@ -312,103 +315,95 @@
     <div class="row justify-content-center" id="bg-img-container">
     </div>
   </div>
-  <div class="row" id="bg-info-cards-container">
-    <div class="row left-info-card hide-left infocard">
-      <div class="info-card-text col-md-6 side-text-content">
-        <h1>SALON COMERCIAL</h1>
-        <div class="text fs-5">
-          <p>Bombas nuevas y recambios línea agrícola
-            Juegos de reparación
-            Rodamientos – Retenes - Oring
-            Empaquetaduras - Sellos mecánicos
-            Impulsores (plásticos – Bronce)
-            Capacitores - Ventiladores plásticos - Borneras
-            Manchones de Acoples Elásticos
-            Sistema de tratamiento de agua para piletas - Ionizadores
-            Desengrasante Industrial - Solvente Dieléctrico – otras aplicaciones</p>
+
+  <div class="container-fluid rounded-container shadow">
+    <div class="row" id="bg-info-cards-container">
+      <div class="row left-info-card hide-left infocard">
+        <div class="info-card-text col-sm-12 col-md-4 col-lg-4 col-xl-4 side-text-content">
+          <h3>SALON COMERCIAL</h3>
+          <div class="text fs-6">
+            <p>Bombas nuevas y recambios línea agrícola<br>
+              Juegos de reparación<br>
+              Rodamientos – Retenes - Oring<br>
+              Empaquetaduras - Sellos mecánicos<br>
+              Impulsores (plásticos – Bronce)<br>
+              Capacitores - Ventiladores plásticos - Borneras<br>
+              Manchones de Acoples Elásticos<br>
+              Sistema de tratamiento de agua para piletas - Ionizadores<br>
+              Desengrasante Industrial - Solvente Dieléctrico – otras aplicaciones</p>
+          </div>
+        </div>
+        <div class="img-info-container col-sm-12 col-md-6 col-lg-4 col-xl-4">
+          <div id="carouselStoreFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/premise.png" class="d-block w-100 img-fluid alt=" ...">
+              </div>
+              <div class="carousel-item active">
+                <img src="assets/nortebombas_store.png" class="d-block w-100 img-fluid alt=" ...">
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselJobsFade" data-bs-slide="prev"
+                hidden>
+                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span> -->
+              </button>
+              <button class="carousel-control-next next-btn" type="button" data-bs-target="#carouselStoreFade"
+                data-bs-slide="next" hidden>
+                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span> -->
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- <div class="col-2">
-
-      </div> -->
-      <div class="img-info-container col-md-6">
-        <div id="carouselStoreFade" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="assets/premise.png" class="d-block w-100 img-fluid alt=" ...">
-            </div>
-            <div class="carousel-item active">
-              <img src="assets/nortebombas_store.png" class="d-block w-100 img-fluid alt=" ...">
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselJobsFade" data-bs-slide="prev"
-              hidden>
-              <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span> -->
-            </button>
-            <button class="carousel-control-next next-btn" type="button" data-bs-target="#carouselStoreFade"
-              data-bs-slide="next" hidden>
-              <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span> -->
-            </button>
+      <div class="row right-info-card hide-right infocard">
+        <div class="img-info-container col-sm-12 col-md-6 col-lg-4 col-xl-4">
+          <img src="assets/taller_loop.png" class="img-fluid">
+        </div>
+        <div class="info-card-text col-sm-12 col-md-6 col-lg-4 col-xl-4 side-text-content">
+          <h2>TALLER ESPECIALIZADO</h2>
+          <div class="text fs-5">
+            <ul>
+              <li>Reparación de motores eléctricos</li>
+              <li>Reparación de Bombas Centrifugas ejes libre</li>
+              <li>Reparación de Electrobombas</li>
+              <li>Reparación de Moto-reductores</li>
+              <li>Reparación de Sellos mecánicos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row left-info-card hide-left infocard">
+        <div class="info-card-text col-sm-12 col-md-6 col-lg-4 col-xl-4 side-text-content">
+          <h2>SERVICIOS DE MANTENIMIENTO E INGENIERIA</h2>
+          <div class="text fs-5">
+            <ul>
+              <li>Asesoramiento en técnicas de mantenimiento</li>
+              <li>Diagnostico de equipos con inspecciones preventivas y predictivas</li>
+              <li>Asistencias en campos para desmontar – Montar equipos rotantes</li>
+              <li>Asesoramiento en seguridad en equipos rotantes</li>
+              <li>Capacitaciones</li>
+            </ul>
+          </div>
+        </div>
+        <div class="img-info-container col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <img src="assets/mantenimiento2.jpg" class="img-fluid">
+        </div>
+      </div>
+      <div class="row right-info-card hide-right infocard">
+        <div class="img-info-container col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <img src="assets/mechanical_seal.jpeg" class="img-fluid">
+        </div>
+        <div class="info-card-text col-sm-12 col-md-6 col-lg-6 col-xl-6 side-text-content">
+          <h1>INTECHSEAL</h1>
+          <div class="text fs-5">
+            <p>Venta y reparación de Motores, Reductores, Electrobombas, Hidrolavadoras, Bombas
+              Sumergibles, bombas cloacales, Moto Bombas, Bombas de desplazamiento positivo (Pistón y
+              engranaje).</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="row right-info-card hide-right infocard">
-      <div class="img-info-container col-4">
-        <img src="assets/taller_loop.png" class="img-fluid">
-      </div>
-      <div class="col-2"></div>
-      <div class="info-card-text col-4 side-text-content">
-        <h2>TALLER ESPECIALIZADO</h2>
-        <div class="text fs-5">
-          <ul>
-            <li>Reparación de motores eléctricos</li>
-            <li>Reparación de Bombas Centrifugas ejes libre</li>
-            <li>Reparación de Electrobombas</li>
-            <li>Reparación de Moto-reductores</li>
-            <li>Reparación de Sellos mecánicos</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row left-info-card hide-left infocard">
-      <div class="info-card-text col-4 side-text-content">
-        <h2>SERVICIOS DE MANTENIMIENTO E INGENIERIA</h2>
-        <div class="text fs-5">
-          <ul>
-            <li>Asesoramiento en técnicas de mantenimiento</li>
-            <li>Diagnostico de equipos con inspecciones preventivas y predictivas</li>
-            <li>Asistencias en campos para desmontar – Montar equipos rotantes</li>
-            <li>Asesoramiento en seguridad en equipos rotantes</li>
-            <li>Capacitaciones</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-2">
-
-      </div>
-      <div class="img-info-container col-4">
-        <img src="assets/mantenimiento2.jpg" class="img-fluid">
-      </div>
-    </div>
-    <div class="row right-info-card hide-right infocard">
-      <div class="img-info-container col-4">
-        <img src="assets/mechanical_seal.jpeg" class="img-fluid">
-      </div>
-      <div class="col-2"></div>
-      <div class="info-card-text col-4 side-text-content">
-        <h1>INTECHSEAL</h1>
-        <div class="text fs-5">
-          <p>Venta y reparación de Motores, Reductores, Electrobombas, Hidrolavadoras, Bombas
-            Sumergibles, bombas cloacales, Moto Bombas, Bombas de desplazamiento positivo (Pistón y
-            engranaje).</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid">
-
   </div>
 
   <footer>
