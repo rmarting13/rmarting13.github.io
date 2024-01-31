@@ -5,6 +5,14 @@ const titles = ["División Automotores",
                 "División Sellos Mecánicos",
                 "División Industrial"];
 
+const main_carousel_squared_urls = ['assets/nortebombas_logo_squared.png',
+                            'assets/collage.png',
+                            'assets/providers_squared.png'];
+
+const main_carousel_wide_urls = ['assets/logo_background.png',
+                            'assets/background_collage.png',
+                            'assets/providers.png'];
+
 const descriptions = ['Venta y reparación de Bombas de Automotor, línea agrícolas, (liviana y pesada), camionetas, \
                         tractores, generadores, auto elevadores, nacionales y importados (recambios con garantía).',
                         'Somos representantes en la zona de Franco Química, empresa especialista en el diseño,\
@@ -132,7 +140,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
+window.onresize = function() {
+  const img = Array.from(document.getElementById('mainCarousel').querySelectorAll('.carousel-item'));
+  if (window.screen.width <= 768) {
+    img.forEach((value, index) => {
+      value.firstElementChild.src = main_carousel_squared_urls[index];
+    });
+  }
+  else {
+    img.forEach((value, index) => {
+      value.firstElementChild.src = main_carousel_wide_urls[index];
+    });
+  }
+}
 
 

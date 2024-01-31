@@ -80,8 +80,9 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
 }
 
-.carousel-caption p {
-    font-size: large;
+.mainCarousel-caption {
+    display: flex;
+    flex-direction: column;
 }
 
 #navbar {
@@ -548,3 +549,18 @@ footer p {
         font-size: 32px;
     }
 } */
+
+@media only screen and (max-width: 768px) {
+    .rounded-container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+
+    .row-flex {
+        flex-direction: column;
+    }
+/*     
+    #mainCarousel img:nth-child(1) { src: url("assets/nortebombas_logo_squared.png"); }
+    #mainCarousel img:nth-child(2) { src: url("assets/collage.png"); }
+    #mainCarousel img:nth-child(3) { src: url("assets/providers_squared.png"); } */
+} 
