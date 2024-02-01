@@ -46,7 +46,7 @@ body {
 .nav-link:hover {
     background-color: sandybrown;
 }
-/* 
+/*
 .row-container {
     padding: 3rem;
 } */
@@ -88,8 +88,8 @@ body {
 #navbar {
     /*display: flex;
     justify-content: space-between;
-    border-bottom: 0.0625em solid gray; 
-    padding: 1.1em 8em; 
+    border-bottom: 0.0625em solid gray;
+    padding: 1.1em 8em;
     position: sticky;*/
     /* top: 0em; */
     background-image:linear-gradient(rgb(65, 105, 225), #201b24);
@@ -151,8 +151,17 @@ div#navbar-right {
     padding: 1em 1em;
     overflow: hidden;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
 }
+
+.img-container {
+    border-radius:0em 3em 3em 3em;
+    position: relative;
+    height: 25rem;
+    
+}
+
 .row-container {
     padding: 1em, 0em;
     justify-content: center;
@@ -166,17 +175,55 @@ div#navbar-right {
 } */
 
  .card-img {
-    border-radius:0em 3em 3em 3em;
-    /* vertical-align: top;
-    width:44em;
-    height:30em; */
     image-rendering: auto;
+    position: absolute;
 }
 
-footer {
-    background-color: transparent;
-    padding: 3em;
-    color: white;
+/* .zoom-in-and-translate {
+    scale: 1.9;
+    translate: 40%;
+} */
+
+.translate-r {
+    scale: 1.9;
+    translate: -40%;
+    animation: r-translation;
+    animation-duration:  3s;
+    animation-fill-mode: forwards;
+}
+
+.translate-l {
+    scale: 1.9;
+    translate: -40%;
+    animation: l-translation;
+    animation-duration:  3s;
+    animation-fill-mode: forwards;
+}
+
+.translate-up {
+    animation-name: up-translation;
+    animation-duration: 3s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+
+.translate-down {
+    animation-name: down-translation;
+    animation-duration: 3s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.zoom-in {
+    /* scale: 0.7; */
+    animation: zoom-in ease forwards;
+    animation-duration: 3s;
+}
+
+.zoom-out {
+    /* scale: 1.2; */
+    animation: zoom-out ease forwards;
+    animation-duration: 3s;
 }
 footer div:first-child {
     display: flex;
@@ -297,6 +344,67 @@ footer p {
   0%,100% { opacity: 0; }
   50% { opacity: 1; }
 } */
+
+  
+@keyframes zoom-in {
+    0% {
+        transform: scale(0.7, 0.7);
+    }
+
+    100% {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+@keyframes zoom-out {
+    0% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(0.7, 0.7);
+    }
+}
+
+@keyframes r-translation {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(40%);
+    }
+}
+
+@keyframes l-translation {
+    0% {
+        transform: translateX(40%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes up-translation {
+    0% {
+        transform: translateY(-40%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes down-translation {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-40%);
+    }
+}
 
 .fade-in {
 	opacity: 1;
@@ -439,7 +547,7 @@ footer p {
     animation-iteration-count: infinite;
     animation-duration: 6s;
   }
-  
+
   @keyframes imagefade {
     0% {
         opacity:1;
@@ -457,7 +565,7 @@ footer p {
         opacity:1;
     }
   }
-  
+
   .image-fader img:nth-of-type(1) {
     animation-delay: 3s;
   }
@@ -486,11 +594,11 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
-    
+
     #navbar {
         flex-direction: column;
     }
-    
+
     .cards-container {
         flex-direction: column;
         align-items: center;
@@ -509,11 +617,11 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
-    
+
     #navbar {
         flex-direction: column;
     }
-    
+
     .cards-container {
         flex-direction: column;
         align-items: center;
@@ -531,7 +639,7 @@ footer p {
         font-size: 10px;
     }
 } */
-/* 
+/*
 @media (width <= 1100px) {
     html {
         font-size: 11px;
@@ -559,8 +667,8 @@ footer p {
     .row-flex {
         flex-direction: column;
     }
-/*     
+/*
     #mainCarousel img:nth-child(1) { src: url("assets/nortebombas_logo_squared.png"); }
     #mainCarousel img:nth-child(2) { src: url("assets/collage.png"); }
     #mainCarousel img:nth-child(3) { src: url("assets/providers_squared.png"); } */
-} 
+}
