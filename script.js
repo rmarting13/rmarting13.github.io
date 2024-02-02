@@ -7,11 +7,6 @@ const titles = ["División Automotores",
   "División Sellos Mecánicos",
   "División Industrial"];
 
-const transformations = ['zoom-in-and-out',
-  'zoom-out',
-  'translate-y',
-  'translate-x'];
-
 const main_carousel_squared_urls = ['assets/nortebombas_logo_squared.png',
   'assets/collage.png',
   'assets/providers_squared.png'];
@@ -54,10 +49,10 @@ const descriptions = ['Venta y reparación de Bombas de Automotor, línea agríc
                         Sumergibles, bombas cloacales, Moto Bombas, Bombas de desplazamiento positivo (Pistón y \
                         engranaje)'];
 
-const img_urls = ['assets/vehicle.jpg',
-  'assets/franco_quimica_bidon.png',
-  'assets/sellos_varios.jpg',
-  'assets/industrial_bomb_background.png'];
+// const img_urls = ['assets/vehicle.jpg',
+//   'assets/franco_quimica_bidon.png',
+//   'assets/sellos_varios.jpg',
+//   'assets/industrial_bomb_background.png'];
 
 // const Sort = {
 //   bubbleSort() {
@@ -152,54 +147,62 @@ function startYAxisTranslation(elem) {
 
 //Launches swap animations when pressing the next button at "Divisiones" card container
 document.getElementById("btn-next").addEventListener("click", async (event) => {
+  const pic_container = document.querySelector('.img-container');
   const pic = document.getElementById('card-img');
   const txt = document.getElementById('card-txt');
   const logo = txt.querySelector('img');
-  pic.classList.replace('translate-x', 'fade-out');
   txt.classList.replace('slide-in', 'slide-out');
+  pic_container.classList.replace('show-left', 'slide-left');
   await delay(300);
-  const urlvalue = img_urls.shift();
-  pic.src = urlvalue;
-  img_urls.push(urlvalue);
+  let urlvalue = '';
   const h1value = titles.shift();
   const pvalue = descriptions.shift();
   txt.querySelector('h1').innerText = h1value;
   titles.push(h1value);
-  pic.className = 'img-fluid card-img fade-out';
-  await delay(300);
-  pic.classList.replace('fade-out', 'fade-in');
   switch (h1value.length) {
-    case 25: //División Sellos Mecánicos
+    case 19: //División Industrial
+      clearTimeout(startAnimation);  
+      logo.hidden = true;
+      pic.classList.remove('translate-r', 'translate-l');
+      urlvalue = division_industrial_urls.shift();
+      pic.src = urlvalue;
+      division_industrial_urls.push(urlvalue);
+      pic.classList.add('zoom-out');
+      startAnimation = setInterval(startZoomInAndOut, 3000, pic, division_industrial_urls);
+      break;
+    case 20://División Automotores
       clearTimeout(startAnimation);
-      pic.classList.replace('fade-in', 'translate-r');
-      logo.src = "assets/Logomejorado.png";
-      logo.hidden = false;
-      startAnimation = setInterval(startXAxisTranslation, 3000, pic, division_sellos_mecanicos_urls);
+      pic.classList.remove('zoom-out', 'zoom-in');
+      urlvalue = division_automotores_urls.shift();
+      pic.src = urlvalue;
+      division_automotores_urls.push(urlvalue);
+      pic.classList.add('translate-l');
+      startAnimation = setInterval(startXAxisTranslation, 3000, pic, division_automotores_urls);
+      logo.hidden = true;
       break;
     case 29: //Divisioń Productos Especiales
       clearTimeout(startAnimation);
+      pic.classList.remove('translate-r', 'translate-l');
       logo.src = 'assets/franco-quimica-logo-1.png';
       logo.hidden = false;
-      pic.classList.replace('fade-in', 'zoom-in');
+      pic.src = division_productos_especiales_urls[0];
+      pic.classList.add('zoom-out');
       clearTimeout(startAnimation);
       startAnimation = setInterval(startZoomInAndOut, 3000, pic, division_productos_especiales_urls);
       break;
-    case 19: //División Industrial
-      logo.hidden = true;
-      // startZoomInAndOutAnimation(pic)
-      pic.classList.replace('fade-in', 'zoom-in');
+    default://División Sellos Mecánicos
       clearTimeout(startAnimation);
-      startAnimation = setInterval(startZoomInAndOut, 3000, pic, division_industrial_urls);
-      break;
-    default: //División Automotores
-      clearTimeout(startAnimation);
-      pic.classList.replace('fade-in', 'translate-r');
-      startAnimation = setInterval(startXAxisTranslation, 3000, pic, division_automotores_urls);
-      logo.hidden = true;
+      pic.classList.remove('zoom-in', 'zoom-out');
+      logo.src = "assets/Logomejorado.png";
+      logo.hidden = false;
+      pic.src = division_sellos_mecanicos_urls[0];
+      pic.classList.add('translate-l');
+      startAnimation = setInterval(startXAxisTranslation, 3000, pic, division_sellos_mecanicos_urls);
   }
   txt.querySelector('p').innerText = pvalue;
   descriptions.push(pvalue)
   txt.classList.replace('slide-out', 'slide-in');
+  pic_container.classList.replace('slide-left', 'show-left');
 
 });
 

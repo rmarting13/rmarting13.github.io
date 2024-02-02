@@ -214,6 +214,10 @@ div#navbar-right {
     animation-fill-mode: forwards;
 }
 
+/* .scaled-for-translation {
+    scale: 1.9;
+} */
+
 .zoom-in {
     /* scale: 0.7; */
     animation: zoom-in ease forwards;
@@ -326,6 +330,10 @@ footer p {
     font-size: 0.9em;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 /**********************TRANSITIONS***********************************/
 
 /* .elementToFadeInAndOut {
@@ -414,6 +422,16 @@ footer p {
 	animation-duration: 300ms;
 }
 
+.fade-in-scaled {
+    scale: 1.9;
+    /* translate: -40%; */
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 300ms;
+}
+
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
@@ -424,6 +442,16 @@ footer p {
 }
 
 .fade-out {
+	opacity: 0;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 300ms;
+}
+
+.fade-out-scaled {
+    scale: 1.9;
+    /* translate: -40%; */
 	opacity: 0;
 	animation-name: fadeOutOpacity;
 	animation-iteration-count: 1;
@@ -499,6 +527,26 @@ footer p {
     100%{
         opacity: 0;
         transform: translateX(200%);
+    }
+}
+
+.slide-left {
+    animation-name: slide-left;
+    animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode:forwards;
+}
+
+@keyframes slide-left {
+    0%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-100%);
     }
 }
 
