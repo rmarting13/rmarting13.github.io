@@ -201,13 +201,15 @@ div#navbar-right {
 }
 
 .translate-up {
+    /* scale: 0.8; */
     animation-name: up-translation;
     animation-duration: 3s;
-    animation-direction: reverse;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
 .translate-down {
+    /* scale: 0.8; */
     animation-name: down-translation;
     animation-duration: 3s;
     animation-direction: normal;
@@ -356,21 +358,21 @@ footer p {
   
 @keyframes zoom-in {
     0% {
-        transform: scale(0.7, 0.7);
+        transform: scale(0.6, 0.6);
     }
 
     100% {
-        transform: scale(1.2, 1.2);
+        transform: scale(1.1, 1.1);
     }
 }
 
 @keyframes zoom-out {
     0% {
-        transform: scale(1.2, 1.2);
+        transform: scale(1.1, 1.1);
     }
 
     100% {
-        transform: scale(0.7, 0.7);
+        transform: scale(0.6, 0.6);
     }
 }
 
@@ -396,21 +398,21 @@ footer p {
 
 @keyframes up-translation {
     0% {
-        transform: translateY(-40%);
+        transform: translateY(20%);
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translateY(-20%);
     }
 }
 
 @keyframes down-translation {
     0% {
-        transform: translateY(0%);
+        transform: translateY(-20%);
     }
 
     100% {
-        transform: translateY(-40%);
+        transform: translateY(20%);
     }
 }
 
@@ -715,8 +717,8 @@ footer p {
     .row-flex {
         flex-direction: column;
     }
-/*
-    #mainCarousel img:nth-child(1) { src: url("assets/nortebombas_logo_squared.png"); }
-    #mainCarousel img:nth-child(2) { src: url("assets/collage.png"); }
-    #mainCarousel img:nth-child(3) { src: url("assets/providers_squared.png"); } */
+
+    .img-container {
+        height: 16rem;
+    }
 }
