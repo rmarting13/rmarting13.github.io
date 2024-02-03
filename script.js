@@ -1,6 +1,8 @@
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 let startAnimation;
+let onCardAppear;
+let animation;
 
 const titles = ["División Automotores",
   "División Productos especiales",
@@ -93,6 +95,16 @@ function startXAxisTranslation(elem, list) {
   elem.classList.toggle('translate-l');
 }
 
+function startYAxisTranslation(elem, list) {
+  if(list){
+    let url = list.shift();
+    elem.src = url;
+    list.push(url);
+  }
+  elem.classList.toggle('translate-up');
+  elem.classList.toggle('translate-down');
+}
+
 // async function startZoomInAndOutAnimation(elem) {
 //   await delay(1000);
 //   elem.classList.replace('fade-in', 'zoom-in');
@@ -176,13 +188,15 @@ document.getElementById("btn-next").addEventListener("click", async (event) => {
       urlvalue = division_automotores_urls.shift();
       pic.src = urlvalue;
       division_automotores_urls.push(urlvalue);
-      pic.classList.add('translate-l');
-      startAnimation = setInterval(startXAxisTranslation, 3000, pic, division_automotores_urls);
+      // pic.classList.add('translate-l');
+      // startAnimation = setInterval(startXAxisTranslation, 3000, pic, division_automotores_urls);
+      pic.classList.add('translate-up');
+      startAnimation = setInterval(startYAxisTranslation, 3000, pic, division_automotores_urls);
       logo.hidden = true;
       break;
     case 29: //Divisioń Productos Especiales
       clearTimeout(startAnimation);
-      pic.classList.remove('translate-r', 'translate-l');
+      pic.classList.remove('translate-up', 'translate-down');
       logo.src = 'assets/franco-quimica-logo-1.png';
       logo.hidden = false;
       pic.src = division_productos_especiales_urls[0];
@@ -275,6 +289,25 @@ window.addEventListener("scroll", function () {
 //   }
 // });
 
+
+//Change size format of carousel from 16:9 to 4:3
+window.onresize = function () {
+  const img = Array.from(document.getElementById('mainCarousel').querySelectorAll('.carousel-item'));
+  const txt = document.getElementById('division-txt');
+  if (window.screen.width <= 768) {
+    img.forEach((value, index) => {
+      value.firstElementChild.src = main_carousel_squared_urls[index];
+      txt.classList.replace('fs-5','fs-6');
+    });
+  }
+  else {
+    img.forEach((value, index) => {
+      value.firstElementChild.src = main_carousel_wide_urls[index];
+      txt.classList.replace('fs-6','fs-5');
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   onCardAppear = [].map.call(document.querySelectorAll(".next-btn"), function (item) {
     return item;
@@ -286,24 +319,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
   }
-  nextSlide();
+  setInterval(nextSlide, 3000);
 
 }, false);
-
-
-
-window.onresize = function () {
-  const img = Array.from(document.getElementById('mainCarousel').querySelectorAll('.carousel-item'));
-  if (window.screen.width <= 768) {
-    img.forEach((value, index) => {
-      value.firstElementChild.src = main_carousel_squared_urls[index];
-    });
-  }
-  else {
-    img.forEach((value, index) => {
-      value.firstElementChild.src = main_carousel_wide_urls[index];
-    });
-  }
-}
-
-
