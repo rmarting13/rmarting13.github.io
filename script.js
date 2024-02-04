@@ -507,7 +507,7 @@ function closeCard(elem) {
 }
 
 //Change size format of carousel from 16:9 to 4:3
-window.onresize = function () {
+function setDefaultContent(){
   const img = Array.from(document.getElementById('mainCarousel').querySelectorAll('.carousel-item'));
   const txt = document.getElementById('division-txt');
   const replaceHtml = document.querySelector('#bg-info-cards-container');
@@ -531,10 +531,14 @@ window.onresize = function () {
   }
 }
 
+window.onresize = setDefaultContent;
+
 document.addEventListener("DOMContentLoaded", function () {
   onCardAppear = [].map.call(document.querySelectorAll(".next-btn"), function (item) {
     return item;
   });
+
+  setDefaultContent();
 
   // cardsHover = [].map.call(document.querySelectorAll(".next-btn"), function (item) {
   //   return item;
@@ -547,6 +551,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
   setInterval(nextSlide, 3000);
+
 
 }, false);
 
