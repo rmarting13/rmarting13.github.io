@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!--BEGIN-OF---------NAVBAR-->
   <nav class="navbar sticky-top navbar-expand-lg" id="navbar">
     <div class="container-fluid" style="padding: 0 1rem 0 1rem;">
       <a href="#">
@@ -27,13 +28,13 @@
       <div class="collapse navbar-collapse justify-content-end navbar-content" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-light fs-6" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active text-light fs-5" aria-current="page" href="#">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light fs-6" aria-current="page" href="#">Servicios</a>
+            <a class="nav-link active text-light fs-5" aria-current="page" href="#">Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fs-6" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            <a class="nav-link text-light fs-5" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
               aria-controls="offcanvasExample">
               Contacto
             </a>
@@ -42,17 +43,10 @@
       </div>
     </div>
   </nav>
-  <!-- <div id="introduction">
-      <div id="introduction-text">
-          <h1>Somos una Fundación dedicada a mejorar la calidad de vida de las personas y su entorno, a través de la tecnología.</h1>
-      </div>
-      <div id="introduction-action">
-          <button class="redondo">Contactanos -></button>
-          <button class="redondo" style="margin-left: 1em;">Sumate +</button>
-      </div>
-  </div> -->
+    <!--END-OF---------NAVBAR-->
 
-  <div class="container-fluid rounded-container shadow">
+    <!--BEGIN-OF---------CAROUSEL-->
+  <div class="container-fluid rounded-container shadow bg-blue-gradient">
     <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -90,76 +84,61 @@
     <!-- <div class="row justify-content-center row-container" id="rc1">
     </div> -->
   </div>
-  <div class="container-fluid rounded-container shadow">
-    <div class="row">
-      <h3 class="display-4 text-center">Conozca nuestro servicios:</h1>
+    <!--END-OF---------CAROUSEL-->
+
+    <!--BEGIN-OF---------SECCIÓN-PRODUCTOS-Y-SERVICIOS-->
+  <div class="container-fluid rounded-container shadow bg-orange-gradient">
+    <div class="row section-header shadow">
+      <h3 class="display-5 text-start">Productos y servicios</h1>
     </div>
     <div class="row card-container">
+      <!--BEGIN-OF---------TARJETA-PRODUCTOS-->   
       <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <!-- <div class="card col-sm-3" style="width: 30rem; padding-top: 0.5rem;"> -->
-        <div class="card m-2 shadow" style="padding: 0.5rem;">
-          <div id="carouselToolsFade" class="carousel slide carousel-fade">
+        <div class="card m-2 shadow card-translucid" style="padding: 0.5rem;">
+          <div id="carouselSalesFade" class="carousel slide carousel-fade">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                  <h5>Máquina de soldar</h5>
+                  <h5>Técnicas de mantenimiento</h5>
                 </div>
                 <img src="assets/instalaciones/resized/maquina_de_soldar.png" class="d-block w-100 img-fluid alt=" ...">
               </div>
               <div class="carousel-item">
                 <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                  <h5>Torno mecánico</h5>
+                  <h5>Diagnóstico de equipos</h5>
                 </div>
                 <img src="assets/instalaciones/resized/torno_mecanico.png" class="d-block w-100 img-fluid" alt="...">
               </div>
               <div class="carousel-item">
                 <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                  <h5>Rectificadora tangencial</h5>
+                  <h5>Montaje de equipos rotantes</h5>
                 </div>
                 <img src="assets/instalaciones/resized/rectificadora_tangencial.png" class="d-block w-100 img-fluid"
                   alt="...">
               </div>
               <div class="carousel-item">
                 <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                  <h5>Banco de pruebas de bombas</h5>
+                  <h5>Seguridad equipos rotantes</h5>
                 </div>
                 <img src="assets/instalaciones/resized/banco_de_pruebas_de_bombas.png" class="d-block w-100 img-fluid"
                   alt="...">
               </div>
               <div class="carousel-item">
                 <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                  <h5>Lapidadora de sellos mecánicos</h5>
+                  <h5>Capacitaciones</h5>
                 </div>
                 <img src="assets/instalaciones/resized/lapiadadora_de_sellos_mecanicos.png"
                   class="d-block w-100 img-fluid" alt="...">
               </div>
-              <div class="carousel-item">
-                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                  <h5>Limadora</h5>
-                </div>
-                <img src="assets/instalaciones/resized/limadora.png" class="d-block w-100 img-fluid" alt="...">
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                  <h5>Perforadora - Fresadora</h5>
-                </div>
-                <img src="assets/instalaciones/resized/fresadora.png" class="d-block w-100 img-fluid" alt="...">
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
-                  <h5>Máquina bobinadora</h5>
-                </div>
-                <img src="assets/instalaciones/resized/maquina_bobinadora.png" class="d-block w-100 img-fluid"
-                  alt="...">
-              </div>
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselToolsFade" data-bs-slide="prev"
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSalesFade" data-bs-slide="prev"
               hidden>
               <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span> -->
             </button>
-            <button class="carousel-control-next next-btn" type="button" data-bs-target="#carouselToolsFade"
+            <button class="carousel-control-next next-btn" type="button" data-bs-target="#carouselsalesFade"
               data-bs-slide="next" hidden>
               <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span> -->
@@ -167,28 +146,20 @@
           </div>
           <div class="card-body">
             <div class="card-header">
-              <h4 class="card-title">Visite nuestras instalaciones</h4>
+              <h4 class="card-title">Productos</h4>
             </div>
             <p class="fs-6">
-              Contamos con una amplia gama de equipos especialiazos para brindar
-              soluciones con la mejor calidad del mercado.
+              Ofrecemos servicios de consultoría y asesoramiento exclusivo en ingeniería y técnicas de mantenimiento
             </p>
             <a href="#" class="btn btn-primary">Ir al catálogo</a>
-            <!-- <ul class="list-group list-group-flush">
-            <li class="list-group-item">Maquina de Soldar</li>
-            <li class="list-group-item">Torno Mecánico</li>
-            <li class="list-group-item">Rectificadora tangencial</li>
-            <li class="list-group-item">Banco de pruebas de Bombas</li>
-            <li class="list-group-item">Lapidadora de sellos mecánicos</li>
-            <li class="list-group-item">Limadora</li>
-            <li class="list-group-item">Agujereadora - Fresadora</li>
-            <li class="list-group-item">Maquina bobinadora</li>
-          </ul> -->
           </div>
         </div>
       </div>
+        <!--END-OF---------TARJETA-PRODUCTOS-->
+
+        <!--BEGIN-OF---------TARJETA-TRABAJOS-->
       <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card m-2 shadow" style="padding: 0.5rem;">
+        <div class="card m-2 shadow card-translucid" style="padding: 0.5rem;">
           <div id="carouselJobsFade" class="carousel slide carousel-fade">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -275,10 +246,81 @@
           </div>
         </div>
       </div>
+        <!--END-OF---------TARJETA-TRABAJOS-->
+
+        <!--BEGIN-OF---------TARJETA-SERVICIOS-->
+      <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <!-- <div class="card col-sm-3" style="width: 30rem; padding-top: 0.5rem;"> -->
+        <div class="card m-2 shadow card-translucid" style="padding: 0.5rem;">
+          <div id="carouselToolsFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Técnicas de mantenimiento</h5>
+                </div>
+                <img src="assets/instalaciones/resized/maquina_de_soldar.png" class="d-block w-100 img-fluid alt=" ...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Diagnóstico de equipos</h5>
+                </div>
+                <img src="assets/instalaciones/resized/torno_mecanico.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Montaje de equipos rotantes</h5>
+                </div>
+                <img src="assets/instalaciones/resized/rectificadora_tangencial.png" class="d-block w-100 img-fluid"
+                  alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Seguridad equipos rotantes</h5>
+                </div>
+                <img src="assets/instalaciones/resized/banco_de_pruebas_de_bombas.png" class="d-block w-100 img-fluid"
+                  alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-caption carousel-caption-custom d-none d-md-block">
+                  <h5>Capacitaciones</h5>
+                </div>
+                <img src="assets/instalaciones/resized/lapiadadora_de_sellos_mecanicos.png"
+                  class="d-block w-100 img-fluid" alt="...">
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselToolsFade" data-bs-slide="prev"
+              hidden>
+              <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span> -->
+            </button>
+            <button class="carousel-control-next next-btn" type="button" data-bs-target="#carouselToolsFade"
+              data-bs-slide="next" hidden>
+              <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span> -->
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <h4 class="card-title">Consultoría y Asesoramiento</h4>
+            </div>
+            <p class="fs-6">
+              Ofrecemos servicios de consultoría y asesoramiento exclusivo en ingeniería y técnicas de mantenimiento
+            </p>
+            <a href="#" class="btn btn-primary">Ir al catálogo</a>
+          </div>
+        </div>
+      </div>
+        <!--END-OF---------TARJETA-SERVICIOS-->
     </div>
   </div>
+    <!--END-OF---------SECCIÓN-PRODUCTOS-Y-SERVICIOS-->
 
-  <div class="container-fluid rounded-container shadow">
+    <!--BEGIN-OF---------SECCIÓN-DIVISIONES-->
+  <div class="container-fluid rounded-container shadow blue-white-gradient">
+    <div class="row section-header shadow">
+      <h3 class="display-6 text-start">Explore nuestras divisiones</h1>
+    </div>
     <div class="row row-flex overflow-hidden" style="justify-content: space-around; align-items: center; padding: 1rem;">
       <div class="row-card-container col-sm-8 col-md-6 col-lg-6 col-xl-6 img-container shadow show-left">
         <!-- <div class="img-content"> -->
@@ -301,28 +343,56 @@
       </div>
     </div>
   </div>
+    <!--BEGIN-OF---------SECCIÓN-DIVISIONES-->
 
-  <div class="container-fluid rounded-container">
-    
+    <!--BEGIN-OF---------BLACK-LABEL-DESCRIPTION-->
+  <div class="container-fluid rounded-container shadow bg-orange-gradient"> 
     <div class="row row-container" id="rc2">
-      <div class="col-sm-12 col-md-9 col-lg-6 col-xl-6" id="header-1">
-        <h3>
-          Una empresa de salta, ubicada en San Ramon de la nueva Oran, con más de 30 años de
-          trayectoria, cuenta con soluciones electromecánicas para la industria:
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="header-1">
+        <h3 class="display-6 text-justify">
+          Somos una empresa de Salta, ubicada en San Ramon de la nueva Oran, con más de 30 años de
+          trayectoria y que cuenta con soluciones electromecánicas para la industria.
         </h3>
       </div>
     </div>
     <div class="row justify-content-center" id="bg-img-container">
     </div>
   </div>
-
-  <div class="container-fluid rounded-container shadow">
+    <!--BEGIN-OF---------BLACK-LABEL-DESCRIPTION-->
+    
+    <!--BEGIN-OF---------SLIDE-CARDS-->
+  <div class="container-fluid rounded-container shadow bg-blue-gradient">
     <div class="row" id="bg-info-cards-container">
-      <div class="row left-info-card hide-left infocard">
-        <div class="info-card-text col-sm-12 col-md-4 col-lg-4 col-xl-4 side-text-content">
-          <h3>SALON COMERCIAL</h3>
-          <div class="text fs-6">
-            <p>Bombas nuevas y recambios línea agrícola<br>
+      
+      <div class="card card-translucid col-sm-12 col-md-6 col-lg-3 col-xl-3" style="--bs-card-bg: none"
+      onmouseover='openCard(this)' onmouseout="closeCard(this)">
+        <!-- <img src="assets/nortebombas_store_960x465.png" class="img-fluid" alt="..."> -->
+        <div id="carouselStoreFade" class="carousel slide carousel-fade top-card-img" hidden>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/premise_new.png" class="d-block w-100 img-fluid alt=" ...">
+              </div>
+              <div class="carousel-item active">
+                <img src="assets/nortebombas_store_960x465.png" class="d-block w-100 img-fluid alt=" ...">
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselJobsFade" data-bs-slide="prev"
+                hidden>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselStoreFade"
+                data-bs-slide="next" id='next-btn' hidden>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+        </div>
+        <div class="card-body" style="background: none;">
+          <div class="card-header">
+            <h4 class="card-title display-8">SALON COMERCIAL</h4>
+          </div>
+          <p class="fs-7 txt-card-body"  hidden>
+            Bombas nuevas y recambios línea agrícola<br>
               Juegos de reparación<br>
               Rodamientos – Retenes - Oring<br>
               Empaquetaduras - Sellos mecánicos<br>
@@ -330,117 +400,112 @@
               Capacitores - Ventiladores plásticos - Borneras<br>
               Manchones de Acoples Elásticos<br>
               Sistema de tratamiento de agua para piletas - Ionizadores<br>
-              Desengrasante Industrial - Solvente Dieléctrico – otras aplicaciones</p>
-          </div>
-        </div>
-        <div class="img-info-container col-sm-12 col-md-6 col-lg-4 col-xl-4">
-          <div id="carouselStoreFade" class="carousel slide carousel-fade">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/premise.png" class="d-block w-100 img-fluid alt=" ...">
-              </div>
-              <div class="carousel-item active">
-                <img src="assets/nortebombas_store.png" class="d-block w-100 img-fluid alt=" ...">
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselJobsFade" data-bs-slide="prev"
-                hidden>
-                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span> -->
-              </button>
-              <button class="carousel-control-next next-btn" type="button" data-bs-target="#carouselStoreFade"
-                data-bs-slide="next" hidden>
-                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span> -->
-              </button>
-            </div>
-          </div>
+              Desengrasante Industrial - Solvente Dieléctrico – otras aplicaciones
+          </p>
         </div>
       </div>
-      <div class="row right-info-card hide-right infocard">
-        <div class="img-info-container col-sm-12 col-md-6 col-lg-4 col-xl-4">
-          <img src="assets/taller_loop.png" class="img-fluid">
-        </div>
-        <div class="info-card-text col-sm-12 col-md-6 col-lg-4 col-xl-4 side-text-content">
-          <h2>TALLER ESPECIALIZADO</h2>
-          <div class="text fs-5">
-            <ul>
-              <li>Reparación de motores eléctricos</li>
-              <li>Reparación de Bombas Centrifugas ejes libre</li>
-              <li>Reparación de Electrobombas</li>
-              <li>Reparación de Moto-reductores</li>
-              <li>Reparación de Sellos mecánicos</li>
-            </ul>
+      <div class="card card-translucid col-sm-12 col-md-6 col-lg-3 col-xl-3" style="--bs-card-bg: none"
+      onmouseover='openCard(this)' onmouseout="closeCard(this)">
+        <img src="assets/taller_960x465.png" class="img-fluid top-card-img" alt="..." hidden>
+        <div class="card-body">
+          <div class="card-header">
+            <h4 class="card-title display-8">TALLER ESPECIALIZADO</h4>
           </div>
+          <p class="fs-7 txt-card-body" hidden>
+              Reparación de motores eléctricos<br>
+              Reparación de Bombas Centrifugas ejes libre<br>
+              Reparación de Electrobombas<br>
+              Reparación de Moto-reductores<br>
+              Reparación de Sellos mecánicos<br>
+          </p>
         </div>
       </div>
-      <div class="row left-info-card hide-left infocard">
-        <div class="info-card-text col-sm-12 col-md-6 col-lg-4 col-xl-4 side-text-content">
-          <h2>SERVICIOS DE MANTENIMIENTO E INGENIERIA</h2>
-          <div class="text fs-5">
-            <ul>
-              <li>Asesoramiento en técnicas de mantenimiento</li>
-              <li>Diagnostico de equipos con inspecciones preventivas y predictivas</li>
-              <li>Asistencias en campos para desmontar – Montar equipos rotantes</li>
-              <li>Asesoramiento en seguridad en equipos rotantes</li>
-              <li>Capacitaciones</li>
-            </ul>
+      <div class="card card-translucid col-sm-12 col-md-6 col-lg-3 col-xl-3" style="--bs-card-bg: none"
+      onmouseover='openCard(this)' onmouseout="closeCard(this)">
+        <img src="assets/mantenimiento_960x465.png" class="img-fluid top-card-img" alt="..." hidden>
+        <div class="card-body">
+          <div class="card-header">
+            <h4 class="card-title display-8">INGENIERIA</h4>
           </div>
-        </div>
-        <div class="img-info-container col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <img src="assets/mantenimiento2.jpg" class="img-fluid">
+          <p class="fs-7 txt-card-body" hidden>
+            Asesoramiento en técnicas de mantenimiento<br>
+              Diagnostico de equipos con inspecciones preventivas y predictivas<br>
+              Asistencias en campos para desmontar – Montar equipos rotantes<br>
+              Asesoramiento en seguridad en equipos rotantes<br>
+              Capacitaciones<br>
+          </p>
         </div>
       </div>
-      <div class="row right-info-card hide-right infocard">
-        <div class="img-info-container col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <img src="assets/mechanical_seal.jpeg" class="img-fluid">
-        </div>
-        <div class="info-card-text col-sm-12 col-md-6 col-lg-6 col-xl-6 side-text-content">
-          <h1>INTECHSEAL</h1>
-          <div class="text fs-5">
-            <p>Venta y reparación de Motores, Reductores, Electrobombas, Hidrolavadoras, Bombas
-              Sumergibles, bombas cloacales, Moto Bombas, Bombas de desplazamiento positivo (Pistón y
-              engranaje).</p>
+      <div class="card card-translucid col-sm-12 col-md-6 col-lg-3 col-xl-3" style="--bs-card-bg: none"
+      onmouseover='openCard(this)' onmouseout="closeCard(this)">
+        <img src="assets/Logomejorado.png" class="img-fluid top-card-img" alt="..." hidden>
+        <div class="card-body">
+          <div class="card-header">
+            <h4 class="card-title display-8">INTECHSEAL</h4>
           </div>
+          <p class="fs-7 txt-card-body" hidden>
+            INTECH SEAL cuenta con una sumatoria de más de 30 años de experiencia en el mercado de sellos mecánicos.
+              Posee un centro de servicios integral, equipado con maquinarias de última generación, que permiten reparar todo tipo de sellos
+              mecánicos, asegurando la calidad y una marcada reducción en los costos asumidos. Así mismo se cuenta con un área de
+              mecanizado, para la producción de piezas metálicas.
+              Se realiza la conversión de equipos empaquetados a sistemas de sello mecánico.
+              Se asesora en la selección del sistema de sellado más propicio para la aplicación, contando con toda la gama de productos para
+              tal fin.
+          </p>
         </div>
       </div>
     </div>
   </div>
+    <!--END-OF---------SLIDE-CARDS-->
 
+  <!--BEGIN-OF---------FOOTER-->
   <footer>
-    <div>
-      <div class="footer-item">
-        <img src="assets/nortebombas_tm_2.png" alt="">
+    <div class="row" style="justify-content: space-between; padding: 2rem;">
+      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 footer-item" style="align-items: center;">
+        <img src="assets/nortebombas_logo60x70cm-removebg.png" alt="" id="footer-img">
       </div>
-      <div id="footer-p">
-        <h4>Administración y Venta: Gabriela Mercado</h4>
+      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 footer-item" id="footer-p">
+        <h4 class="fs-5">Administración y Venta: Gabriela Mercado</h4>
         <p><strong>Tel:</strong> 3878 422061<br>
           <strong>Cel:</strong> 3878 330318<br>
           Alvarado 1090 C/P 4530 Oran-Salta
         </p>
       </div>
-      <div class="link">
-        <p>
-          <a href="#">NOSOTROS</a><br>
-          <a href="#">CONTACTO</a>
-        </p>
-      </div>
-      <div class="link">
-        <p>
-          <a href="#programas">PROGRAMAS</a><br>
-          <a href="#capacitaciones">CAPACITACIONES</a>
-        </p>
-      </div>
-      <div class="link">
-        <p>
-          <a href="https://www.instagram.com/technologywithpurpose/">INSTAGRAM</a><br>
-          <a href="https://www.linkedin.com/company/technologywithpurpose/">LINKEDIN</a>
-        </p>
-      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 footer-item social-media-footer">
+        <a href="" class="social-media-link fs-4">
+          <img src="assets/social/whatsapp-svgrepo-com-off.svg" alt=""
+          onmouseover="this.src='assets/social/whatsapp-logo-svgrepo-com.svg';" 
+          onmouseout="this.src='assets/social/whatsapp-svgrepo-com-off.svg';"
+          data-bs-toggle="tooltip" data-bs-title="Envíanos un Whatsapp">
+        </a>
+        <a href="" class="social-media-link fs-4">
+          <img src="assets/social/instagram-1-svgrepo-com-off.svg" alt=""
+          onmouseover="this.src='assets/social/instagram-1-svgrepo-com.svg';" 
+          onmouseout="this.src='assets/social/instagram-1-svgrepo-com-off.svg';"
+          data-bs-toggle="tooltip" data-bs-title="Seguinos en Instagram">
+        </a>
+        <a href="" class="social-media-link fs-4">
+          <img src="assets/social/facebook-1-svgrepo-com-off.svg" alt=""
+          onmouseover="this.src='assets/social/facebook-1-svgrepo-com.svg';" 
+          onmouseout="this.src='assets/social/facebook-1-svgrepo-com-off.svg';"
+          data-bs-toggle="tooltip" data-bs-title="Visita nuetro Facebook">
+          
+        </a>
+        <a href="" class="social-media-link fs-4">
+          <img src="assets/social/linkedin-1-svgrepo-com-off.svg" alt=""
+          onmouseover="this.src='assets/social/linkedin-1-svgrepo-com.svg';" 
+          onmouseout="this.src='assets/social/linkedin-1-svgrepo-com-off.svg';"
+          data-bs-toggle="tooltip" data-bs-title="Visita nuestro Linkedin">
+        </a>
+      </div>  
     </div>
   </footer>
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <!--END-OF---------FOOTER-->
+
+  <!--BEGIN-OF---------FORMULARIO DE CONTACTO-->
+  <div class="offcanvas offcanvas-start bg-darkblue-gradient" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Contáctenos</h5>
+      <h5 class="offcanvas-title display-6" id="offcanvasExampleLabel">Contáctenos</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -463,12 +528,42 @@
             <textarea class="form-control" id="formControlTextAsunto" rows="3"></textarea>
           </div>
         </div>
+        <button type="button" class="btn btn-dark">Enviar</button>
+        <hr/>
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Visítenos en nuestras redes sociales</h5>
+        <div class="row social-media-container">
+          <a href="" class="social-media-link fs-4">
+            <img src="assets/social/whatsapp-svgrepo-com-off.svg" alt=""
+            onmouseover="this.src='assets/social/whatsapp-logo-svgrepo-com.svg';" 
+            onmouseout="this.src='assets/social/whatsapp-svgrepo-com-off.svg';">
+          </a>
+          <a href="" class="social-media-link fs-4">
+            <img src="assets/social/instagram-1-svgrepo-com-off.svg" alt=""
+            onmouseover="this.src='assets/social/instagram-1-svgrepo-com.svg';" 
+            onmouseout="this.src='assets/social/instagram-1-svgrepo-com-off.svg';">
+          </a>
+
+          <a href="" class="social-media-link fs-4">
+            <img src="assets/social/facebook-1-svgrepo-com-off.svg" alt=""
+            onmouseover="this.src='assets/social/facebook-1-svgrepo-com.svg';" 
+            onmouseout="this.src='assets/social/facebook-1-svgrepo-com-off.svg';">
+          </a>
+
+          <a href="" class="social-media-link fs-4">
+            <img src="assets/social/linkedin-1-svgrepo-com-off.svg" alt=""
+            onmouseover="this.src='assets/social/linkedin-1-svgrepo-com.svg';" 
+            onmouseout="this.src='assets/social/linkedin-1-svgrepo-com-off.svg';">
+              </a>
+        </div>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-      <script src="script.js"></script>
+    </div>
+  </div>
+  <!--END-OF---------FORMULARIO DE CONTACTO-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

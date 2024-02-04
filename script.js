@@ -1,8 +1,15 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 const delay = ms => new Promise(res => setTimeout(res, ms));
+
+let lowSizeFlag = false;
+let highSizeFlag = true;
 
 let startAnimation;
 let onCardAppear;
 let animation;
+let cardsHover;
+
 
 const titles = ["División Automotores",
   "División Productos especiales",
@@ -50,6 +57,201 @@ const descriptions = ['Venta y reparación de Bombas de Automotor, línea agríc
   'Venta y reparación de Motores, Reductores, Electrobombas, Hidrolavadoras, Bombas \
                         Sumergibles, bombas cloacales, Moto Bombas, Bombas de desplazamiento positivo (Pistón y \
                         engranaje)'];
+
+const html_l = `<div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <strong>SALON COMERCIAL</strong>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div id="carouselStoreFade" class="carousel slide carousel-fade top-card-img">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/premise_new.png" class="d-block w-100 img-fluid alt=" ...">
+                          </div>
+                          <div class="carousel-item active">
+                            <img src="assets/nortebombas_store_960x465.png" class="d-block w-100 img-fluid alt=" ...">
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselJobsFade" data-bs-slide="prev"
+                            hidden>
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselStoreFade"
+                            data-bs-slide="next" id='next-btn' hidden>
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                    </div>
+                      <p class="fs-7 txt-card-body">
+                        Bombas nuevas y recambios línea agrícola<br>
+                          Juegos de reparación<br>
+                          Rodamientos – Retenes - Oring<br>
+                          Empaquetaduras - Sellos mecánicos<br>
+                          Impulsores (plásticos – Bronce)<br>
+                          Capacitores - Ventiladores plásticos - Borneras<br>
+                          Manchones de Acoples Elásticos<br>
+                          Sistema de tratamiento de agua para piletas - Ionizadores<br>
+                          Desengrasante Industrial - Solvente Dieléctrico – otras aplicaciones
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <strong>TALLER ESPECIALIZADO </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <img src="assets/taller_960x465.png" class="img-fluid top-card-img" alt="...">
+                      <p class="fs-7 txt-card-body">
+                        Reparación de motores eléctricos<br>
+                        Reparación de Bombas Centrifugas ejes libre<br>
+                        Reparación de Electrobombas<br>
+                        Reparación de Moto-reductores<br>
+                        Reparación de Sellos mecánicos<br>
+                    </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <strong>INGENIERIA</strong>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <img src="assets/mantenimiento_960x465.png" class="img-fluid top-card-img" alt="...">
+                      <p class="fs-7 txt-card-body">
+                        Asesoramiento en técnicas de mantenimiento<br>
+                          Diagnostico de equipos con inspecciones preventivas y predictivas<br>
+                          Asistencias en campos para desmontar – Montar equipos rotantes<br>
+                          Asesoramiento en seguridad en equipos rotantes<br>
+                          Capacitaciones<br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      <strong>INTECHSEAL</strong>
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <img src="assets/Logomejorado.png" class="img-fluid top-card-img" alt="...">
+                      <p class="fs-7 txt-card-body">
+                        INTECH SEAL cuenta con una sumatoria de más de 30 años de experiencia en el mercado de sellos mecánicos.
+                          Posee un centro de servicios integral, equipado con maquinarias de última generación, que permiten reparar todo tipo de sellos
+                          mecánicos, asegurando la calidad y una marcada reducción en los costos asumidos. Así mismo se cuenta con un área de
+                          mecanizado, para la producción de piezas metálicas.
+                          Se realiza la conversión de equipos empaquetados a sistemas de sello mecánico.
+                          Se asesora en la selección del sistema de sellado más propicio para la aplicación, contando con toda la gama de productos para
+                          tal fin.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                </div>`
+
+const html_h = ` <div class="card card-translucid col-sm-12 col-md-6 col-lg-3 col-xl-3" style="--bs-card-bg: none"
+onmouseover='openCard(this)' onmouseout="closeCard(this)">
+  <!-- <img src="assets/nortebombas_store_960x465.png" class="img-fluid" alt="..."> -->
+  <div id="carouselStoreFade" class="carousel slide carousel-fade top-card-img" hidden>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/premise_new.png" class="d-block w-100 img-fluid alt=" ...">
+        </div>
+        <div class="carousel-item active">
+          <img src="assets/nortebombas_store_960x465.png" class="d-block w-100 img-fluid alt=" ...">
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselJobsFade" data-bs-slide="prev"
+          hidden>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselStoreFade"
+          data-bs-slide="next" id='next-btn' hidden>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </div>
+  <div class="card-body" style="background: none;">
+    <div class="card-header">
+      <h4 class="card-title display-8">SALON COMERCIAL</h4>
+    </div>
+    <p class="fs-7 txt-card-body"  hidden>
+      Bombas nuevas y recambios línea agrícola<br>
+        Juegos de reparación<br>
+        Rodamientos – Retenes - Oring<br>
+        Empaquetaduras - Sellos mecánicos<br>
+        Impulsores (plásticos – Bronce)<br>
+        Capacitores - Ventiladores plásticos - Borneras<br>
+        Manchones de Acoples Elásticos<br>
+        Sistema de tratamiento de agua para piletas - Ionizadores<br>
+        Desengrasante Industrial - Solvente Dieléctrico – otras aplicaciones
+    </p>
+  </div>
+</div>
+<div class="card card-translucid col-sm-12 col-md-6 col-lg-3 col-xl-3" style="--bs-card-bg: none"
+onmouseover='openCard(this)' onmouseout="closeCard(this)">
+  <img src="assets/taller_960x465.png" class="img-fluid top-card-img" alt="..." hidden>
+  <div class="card-body">
+    <div class="card-header">
+      <h4 class="card-title display-8">TALLER ESPECIALIZADO</h4>
+    </div>
+    <p class="fs-7 txt-card-body" hidden>
+        Reparación de motores eléctricos<br>
+        Reparación de Bombas Centrifugas ejes libre<br>
+        Reparación de Electrobombas<br>
+        Reparación de Moto-reductores<br>
+        Reparación de Sellos mecánicos<br>
+    </p>
+  </div>
+</div>
+<div class="card card-translucid col-sm-12 col-md-6 col-lg-3 col-xl-3" style="--bs-card-bg: none"
+onmouseover='openCard(this)' onmouseout="closeCard(this)">
+  <img src="assets/mantenimiento_960x465.png" class="img-fluid top-card-img" alt="..." hidden>
+  <div class="card-body">
+    <div class="card-header">
+      <h4 class="card-title display-8">INGENIERIA</h4>
+    </div>
+    <p class="fs-7 txt-card-body" hidden>
+      Asesoramiento en técnicas de mantenimiento<br>
+        Diagnostico de equipos con inspecciones preventivas y predictivas<br>
+        Asistencias en campos para desmontar – Montar equipos rotantes<br>
+        Asesoramiento en seguridad en equipos rotantes<br>
+        Capacitaciones<br>
+    </p>
+  </div>
+</div>
+<div class="card card-translucid col-sm-12 col-md-6 col-lg-3 col-xl-3" style="--bs-card-bg: none"
+onmouseover='openCard(this)' onmouseout="closeCard(this)">
+  <img src="assets/Logomejorado.png" class="img-fluid top-card-img" alt="..." hidden>
+  <div class="card-body">
+    <div class="card-header">
+      <h4 class="card-title display-8">INTECHSEAL</h4>
+    </div>
+    <p class="fs-7 txt-card-body" hidden>
+      INTECH SEAL cuenta con una sumatoria de más de 30 años de experiencia en el mercado de sellos mecánicos.
+        Posee un centro de servicios integral, equipado con maquinarias de última generación, que permiten reparar todo tipo de sellos
+        mecánicos, asegurando la calidad y una marcada reducción en los costos asumidos. Así mismo se cuenta con un área de
+        mecanizado, para la producción de piezas metálicas.
+        Se realiza la conversión de equipos empaquetados a sistemas de sello mecánico.
+        Se asesora en la selección del sistema de sellado más propicio para la aplicación, contando con toda la gama de productos para
+        tal fin.
+    </p>
+  </div>
+</div>`
 
 // const img_urls = ['assets/vehicle.jpg',
 //   'assets/franco_quimica_bidon.png',
@@ -251,30 +453,30 @@ document.getElementById("btn-next").addEventListener("click", async (event) => {
 //     observer.observe(el, options);
 //   });
 
-let onAppear = [];
+// let onAppear = [];
 
-document.addEventListener("DOMContentLoaded", function () {
-  onAppear = [].map.call(document.querySelectorAll(".infocard"), function (item) {
-    return item;
-  });
-}, false);
+// document.addEventListener("DOMContentLoaded", function () {
+//   onAppear = [].map.call(document.querySelectorAll(".infocard"), function (item) {
+//     return item;
+//   });
+// }, false);
+// SLIDES CARDS FROM OUTSIDE TO INSIDE WHILE USER SCROLLS THE PAGE:
+// window.addEventListener("scroll", function () {
+//   onAppear.forEach(function (elem) {
+//     var vwTop = window.pageYOffset;
+//     var vwBottom = (window.pageYOffset + window.innerHeight);
+//     var elemTop = elem.offsetTop;
+//     var elemHeight = elem.offsetHeight;
 
-window.addEventListener("scroll", function () {
-  onAppear.forEach(function (elem) {
-    var vwTop = window.pageYOffset;
-    var vwBottom = (window.pageYOffset + window.innerHeight);
-    var elemTop = elem.offsetTop;
-    var elemHeight = elem.offsetHeight;
-
-    if (vwBottom > elemTop && ((vwTop - elemHeight) < elemTop)) {
-      elem.classList.replace("hide-left", "show-left");
-      elem.classList.replace("hide-right", "show-right");
-    } else {
-      elem.classList.replace("show-left", "hide-left");
-      elem.classList.replace("show-right", "hide-right");
-    }
-  });
-}, false);
+//     if (vwBottom > elemTop && ((vwTop - elemHeight) < elemTop)) {
+//       elem.classList.replace("hide-left", "show-left");
+//       elem.classList.replace("hide-right", "show-right");
+//     } else {
+//       elem.classList.replace("show-left", "hide-left");
+//       elem.classList.replace("show-right", "hide-right");
+//     }
+//   });
+// }, false);
 
 // VERY USEFUL TO SLIDE IMAGES
 // addEventListener("load",() => { // "load" is safe but "DOMContentLoaded" starts earlier
@@ -290,21 +492,42 @@ window.addEventListener("scroll", function () {
 // });
 
 
+function openCard(elem) {
+  elem.querySelector('.top-card-img').hidden = false;
+  elem.querySelector('.txt-card-body').hidden = false;
+  animation = setInterval(() => {
+    elem.querySelector('#next-btn').click();
+  }, 3000);  
+}
+
+function closeCard(elem) {
+  elem.querySelector('.top-card-img').hidden = true;
+  elem.querySelector('.txt-card-body').hidden = true;
+  clearInterval(animation);
+}
+
 //Change size format of carousel from 16:9 to 4:3
 window.onresize = function () {
   const img = Array.from(document.getElementById('mainCarousel').querySelectorAll('.carousel-item'));
   const txt = document.getElementById('division-txt');
-  if (window.screen.width <= 768) {
+  const replaceHtml = document.querySelector('#bg-info-cards-container');
+  if (window.screen.width <= 768 && !lowSizeFlag) {
     img.forEach((value, index) => {
       value.firstElementChild.src = main_carousel_squared_urls[index];
       txt.classList.replace('fs-5','fs-6');
     });
+    replaceHtml.innerHTML = html_l;
+    lowSizeFlag = true;
+    highSizeFlag = false;
   }
-  else {
+  else if(window.screen.width > 768 && !highSizeFlag) {
     img.forEach((value, index) => {
       value.firstElementChild.src = main_carousel_wide_urls[index];
       txt.classList.replace('fs-6','fs-5');
     });
+    replaceHtml.innerHTML = html_h;
+    highSizeFlag = true;
+    lowSizeFlag = false;
   }
 }
 
@@ -312,6 +535,10 @@ document.addEventListener("DOMContentLoaded", function () {
   onCardAppear = [].map.call(document.querySelectorAll(".next-btn"), function (item) {
     return item;
   });
+
+  // cardsHover = [].map.call(document.querySelectorAll(".next-btn"), function (item) {
+  //   return item;
+  // });
 
   function nextSlide() {
     onCardAppear.forEach((elem) => {
@@ -322,3 +549,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(nextSlide, 3000);
 
 }, false);
+
+
