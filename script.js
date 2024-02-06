@@ -511,11 +511,13 @@ function setDefaultContent(){
   const img = Array.from(document.getElementById('mainCarousel').querySelectorAll('.carousel-item'));
   const txt = document.getElementById('division-txt');
   const replaceHtml = document.querySelector('#bg-info-cards-container');
+  const header1 = document.getElementById('header-1');
   if (window.screen.width <= 768 && !lowSizeFlag) {
     img.forEach((value, index) => {
       value.firstElementChild.src = main_carousel_squared_urls[index];
       txt.classList.replace('fs-5','fs-6');
     });
+    header1.firstElementChild.classList.replace('display-6', 'fs-4');
     replaceHtml.innerHTML = html_l;
     lowSizeFlag = true;
     highSizeFlag = false;
@@ -525,6 +527,7 @@ function setDefaultContent(){
       value.firstElementChild.src = main_carousel_wide_urls[index];
       txt.classList.replace('fs-6','fs-5');
     });
+    header1.firstElementChild.classList.replace('fs-4', 'display-6');
     replaceHtml.innerHTML = html_h;
     highSizeFlag = true;
     lowSizeFlag = false;
