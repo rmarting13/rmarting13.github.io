@@ -902,6 +902,9 @@ footer p {
     .card-container {
         padding: 0;
     }
+    #header-1 {
+        padding: 2rem;
+    }
     
 }
 
@@ -912,6 +915,7 @@ footer p {
     #bg-info-cards-container {
         height: 43rem;
     }
+    
 }
 
 @media only screen and (min-width: 850px) and (max-width: 900px) {
