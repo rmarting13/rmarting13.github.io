@@ -46,6 +46,18 @@ const division_sellos_mecanicos_urls = [
   'assets/sellos_varios.jpg'
 ];
 
+const social_media_icon_on_urls = [
+  'assets/social/whatsapp-logo-svgrepo-com.svg',
+  'assets/social/instagram-1-svgrepo-com.svg',
+  'assets/social/facebook-1-svgrepo-com.svg'
+];
+
+const social_media_icon_off_urls = [
+  'assets/social/whatsapp-svgrepo-com-off.svg',
+  'assets/social/instagram-1-svgrepo-com-off.svg',
+  'assets/social/facebook-1-svgrepo-com-off.svg'
+];
+
 const descriptions = ['Venta y reparación de Bombas de Automotor, línea agrícolas, (liviana y pesada), camionetas, \
                         tractores, generadores, auto elevadores, nacionales y importados (recambios con garantía).',
   'Somos representantes en la zona de Franco Química, empresa especialista en el diseño,\
@@ -508,10 +520,12 @@ function closeCard(elem) {
 
 //Change size format of carousel from 16:9 to 4:3
 function setDefaultContent(){
+  let icon_url;
   const img = Array.from(document.getElementById('mainCarousel').querySelectorAll('.carousel-item'));
   const txt = document.getElementById('division-txt');
   const replaceHtml = document.querySelector('#bg-info-cards-container');
   const header1 = document.getElementById('header-1');
+  const icons = document.querySelectorAll('.social-media-link');
   if (window.screen.width <= 768 && !lowSizeFlag) {
     img.forEach((value, index) => {
       value.firstElementChild.src = main_carousel_squared_urls[index];
@@ -519,6 +533,11 @@ function setDefaultContent(){
     });
     header1.firstElementChild.classList.replace('display-6', 'fs-4');
     replaceHtml.innerHTML = html_l;
+    icons.forEach((elem)=>{
+      icon_url = social_media_icon_on_urls.shift();
+      elem.firstElementChild.src = icon_url;
+      social_media_icon_on_urls.push(icon_url);
+    });
     lowSizeFlag = true;
     highSizeFlag = false;
   }
@@ -529,6 +548,11 @@ function setDefaultContent(){
     });
     header1.firstElementChild.classList.replace('fs-4', 'display-6');
     replaceHtml.innerHTML = html_h;
+    icons.forEach((elem)=>{
+      icon_url = social_media_icon_off_urls.shift();
+      elem.firstElementChild.src = icon_url;
+      social_media_icon_off_urls.push(icon_url);
+    });
     highSizeFlag = true;
     lowSizeFlag = false;
   }
